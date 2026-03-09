@@ -93,23 +93,6 @@ Multinomial Naive Bayes was selected as the final model because:
 
 ---
 
-## 🚢 Deployment
-
-The application is deployed on **Streamlit Cloud**.
-
-### Deployment Steps
-
-1. Push code to **GitHub repository**
-2. Connect repository to **Streamlit Cloud**
-3. Configure deployment settings
-4. Deploy automatically on each push
-
-### 🌐 Deployment URL
-
-https://email-spam-classifier-new.streamlit.app/
-
----
-
 ## 🔮 Future Improvements
 
 - Add support for **email attachment analysis**
