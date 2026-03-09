@@ -1,49 +1,59 @@
-# email-spam-classifier-new
-End-to-end code for the email spam classifier project.
-Used to filter spam SMS made by Python with Machine Learning using libraries like Pandas and Numpy.
+📧 Email Spam Classifier
+
+An end-to-end Machine Learning project that classifies SMS messages as Spam or Not Spam (Ham).
+
+The application is built using Python and Machine Learning and deployed using Streamlit.
+It uses Natural Language Processing (NLP) techniques with TF-IDF Vectorization and a Multinomial Naive Bayes model to accurately detect spam messages.
+
+🚀 Project Structure
 email-spam-classifier-new/
 │
-├── app.py                 # Main Streamlit application
-├── model.pkl              # Trained MultinomialNB model
-├── vectorizer.pkl         # TF-IDF vectorizer
-├── requirements.txt       # Python dependencies
-├── nltk.txt              # NLTK data requirements
-├── setup.sh              # Streamlit deployment configuration
-├── sms-spam-detection.ipynb  # Complete Jupyter notebook with EDA & modeling
-├── spam.csv              # Original dataset
-└── README.md             # Project documentation
-
+├── app.py                       # Main Streamlit application
+├── model.pkl                    # Trained MultinomialNB model
+├── vectorizer.pkl               # TF-IDF vectorizer
+├── requirements.txt             # Python dependencies
+├── nltk.txt                     # NLTK data requirements
+├── setup.sh                     # Streamlit deployment configuration
+├── sms-spam-detection.ipynb     # Complete Jupyter notebook (EDA + model training)
+├── spam.csv                     # Original dataset
+└── README.md                    # Project documentation
 🎯 How to Use
-Enter a message in the text area (e.g., "Congratulations! You've won a free iPhone!")
 
-Click the "Predict" button
+Enter a message in the text box
+Example:
 
-View the result - the app will display either "Spam" or "Not Spam"
+Congratulations! You've won a free iPhone!
 
-Example Messages to Try
-Spam Examples:
+Click the Predict button
 
-"WINNER!! As a valued network customer you have been selected to receivea £900 prize reward! To claim call 09061701461. Claim code KL341. Valid 12 hours only."
+The application will classify the message as:
 
-"Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 to receive entry question(std txt rate)T&C's apply 08452810075over18's"
+Spam
 
-Ham Examples:
+Not Spam
 
-"Hey, are we still meeting for lunch today?"
-
-"I'll be home in about 30 minutes, traffic is bad"
-
-"Did you finish the project report?"
-
+🧪 Example Messages
+Spam Examples
+WINNER!! As a valued network customer you have been selected to receive a £900 prize reward! 
+To claim call 09061701461. Claim code KL341. Valid 12 hours only.
+Free entry in a weekly competition to win FA Cup final tickets. 
+Text FA to 87121 to receive entry question.
+Ham (Normal Messages)
+Hey, are we still meeting for lunch today?
+I'll be home in about 30 minutes, traffic is bad.
+Did you finish the project report?
 🔬 Exploratory Data Analysis (EDA)
-The Jupyter notebook includes comprehensive EDA:
 
-Text Statistics
-Ham messages: Average 70 characters, 17 words
+The project includes detailed Exploratory Data Analysis in the Jupyter Notebook.
 
-Spam messages: Average 137 characters, 28 words
+📊 Text Statistics
+Message Type	Avg Characters	Avg Words
+Ham	70	17
+Spam	137	28
+📈 Visualizations
 
-Visualizations
+The notebook includes:
+
 Word clouds for spam and ham messages
 
 Distribution plots of message lengths
@@ -52,53 +62,67 @@ Correlation heatmaps
 
 Bar charts of most common words
 
-Key Insights
-Spam messages tend to be longer on average
+🔎 Key Insights
 
-Spam contains more promotional words ("free", "win", "claim", "cash")
+Spam messages are generally longer.
 
-Ham messages contain more conversational words
+Spam contains promotional keywords like:
+
+free
+win
+claim
+cash
+prize
+
+Ham messages contain normal conversational language.
 
 🏆 Why Multinomial Naive Bayes?
-Multinomial Naive Bayes was selected as the final model because:
 
-High Precision (99.2%): Critical for spam detection to avoid false positives
+Multinomial Naive Bayes was chosen because:
 
-Fast Inference: Efficient for real-time predictions
-
-Works Well with Text Data: Specifically designed for discrete features like word counts
-
-Handles Imbalanced Data: Performs well despite class imbalance
+✔ High Precision (~99.2%) – reduces false positives
+✔ Fast Prediction Speed – suitable for real-time applications
+✔ Works Very Well with Text Data
+✔ Handles Imbalanced Datasets Effectively
 
 🚢 Deployment
-The application is deployed on Streamlit Cloud:
 
-Push code to GitHub repository
+The application is deployed using Streamlit Cloud.
 
-Connect repository to Streamlit Cloud
+Steps
 
-Configure deployment settings
+Push the project to GitHub
 
-Deploy automatically on each push
+Connect the repository with Streamlit Cloud
 
-Deployment URL: https://email-spam-classifier-new.streamlit.app/
+Configure the deployment settings
+
+The app automatically redeploys on every push
+
+🌐 Live Application
+
+https://email-spam-classifier-new.streamlit.app/
 
 🔮 Future Improvements
-Add support for email attachments analysis
 
-Implement deep learning models (LSTM, Transformers)
+Possible upgrades for the project:
 
-Add confidence scores to predictions
+Email attachment analysis
 
-Create API endpoint for programmatic access
+Deep Learning models (LSTM / Transformers)
 
-Add batch processing capability
+Prediction confidence scores
 
-Implement user feedback mechanism
+REST API for external integration
 
-Multi-language support
+Batch message classification
+
+User feedback system
+
+Multi-language spam detection
 
 📚 References
+
 SMS Spam Collection Dataset
 
 scikit-learn Documentation
@@ -108,4 +132,5 @@ NLTK Documentation
 Streamlit Documentation
 
 👨‍💻 Author
+
 Priyansh Kumar
